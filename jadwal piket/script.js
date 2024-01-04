@@ -1,5 +1,5 @@
 document.querySelector(".back-button").addEventListener("click", function() {
-  window.location.href = "../index.html";
+  window.location.href = "24IXF-spero.netlify.app";
 });
 const backButton = document.querySelector('.back-button');
 
@@ -12,5 +12,5 @@ backButton.addEventListener('mouseout', function() {
 });
 backButton.addEventListener('click', function() {
   this.style.transform = 'scale(0.9)';
-  window.location.href = '../index.html';
+  window.location.href = '24IXF-spero.netlify.app';
 });
