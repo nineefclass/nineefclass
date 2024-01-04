@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Digitalt';
+    src: url('Digitalt.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: black;
+    overflow: auto;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    background-size: 400px 400px;
+    z-index: 1;
+    animation: stars 20s linear infinite;
+}
+@keyframes stars {
+    from { background-position: 0 0; }
+    to { background-position: 600px 600px; }
+}
+
+.center, .table-row, table, th, td {
+    position: relative;
+    z-index: 2;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.table-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+table {
+    width: 50%;
+    height: 36%;
+    border-spacing: 0;
+    position: relative;
+    box-shadow: 0px 0px 10px 1px gold; /* Ubah warna bayangan menjadi gold */
+    margin: 10px;
+}
+
+td {
+    color: #628193;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    font-family: 'Digitalt', Fallback, sans-serif;
+    transform: translateY(-4px);
+}
+
+th {
+    background-color: #ff9d00;
+    color: white;
+    border-radius: 15px;
+    z-index: 2;
+    position: relative;
+    transform: translateY(-11px);
+    width: 60px;
+    height: 45px;
+}
+
+.name-divider {
+    border-top: 1px solid black;
+    width: 80%;
+    margin: auto;
+}
+
+.name-spacing {
+    line-height: 2.5em;
+}
+.back-button {
+  font-weight: bold;
+  border: none;
+  background: #2ecc71; /* Warna hijau muda */
+  color: white;
+  padding: 15px 30px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Bayangan */
+  border-radius: 12px; /* Membuat sudut tumpul */
+}
+
+.back-button:hover {
+  background: #27ae60; /* Warna hijau sedikit lebih gelap saat di-hover */
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4); /* Bayangan saat di-hover */
+  color: white;
+  transform: translateY(-7px);
+}
