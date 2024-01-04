@@ -30,7 +30,7 @@ for (var i = 0; i < dayButtons.length; i++) {
 }
 
 document.querySelector(".back-button").addEventListener("click", function() {
-  window.location.href = "../nineefclass";
+  window.location.href = "../index.html";
 });
 const backButton = document.querySelector('.back-button');
 
@@ -43,5 +43,5 @@ backButton.addEventListener('mouseout', function() {
 });
 backButton.addEventListener('click', function() {
   this.style.transform = 'scale(0.9)';
-  window.location.href = '../nineefclass';
+  window.location.href = '../index.html';
 });
