@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* ... Gaya CSS untuk desktop ... */
+
+@media (max-width: 600px) {
+  .day-button {
+    /* ... Gaya CSS untuk tombol hari di mobile ... */
+  }
+
+  .day-schedule {
+    /* ... Gaya CSS untuk jadwal hari di mobile ... */
+  }
+}
+
+.day-button {
+  font-weight: bold;
+  border: 2px solid #3498db;
+  background: #3498db; /* Warna biru full */
+  color: white; /* Warna teks putih */
+  padding: 15px 30px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.day-button:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  transform: translateY(0);
+  transition: transform 0.3s, opacity 0.3s;
+  background: url('p.png') no-repeat center center;
+  background-size: cover;
+}
+
+.day-button.clicked:after {
+  transform: translateY(-100%);
+  transition: transform 0.6s;
+}
+
+.day-button:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.day-button:active {
+  transform: translateY(-1px);
+}
+
+.day-schedule {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+  background: transparen;
+  backdrop-filter: blur(6px);
+}
+
+.day-schedule.hidden {
+  visibility: visible;
+  opacity: 1;
+  transition: visible 0s 0.3s, opacity 0.3s linear;
+}
+.day-schedule.fadeIn {
+  animation: fadeIn 0.5s forwards;
+}
+
+.day-schedule.fadeOut {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.day-schedule td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+#schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: arial black, sans serif;
+}
+
+.day-button {
+  width: 100%; /* Memanjangkan tombol hari */
+  border-radius: 12px; /* Membuat sudut tumpul */
+  /* ... Gaya lainnya ... */
+  color: white;
+}
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.copyright {
+  margin: 10px;
+  color: black;
+  font-size: 14px;
+  background: transparen;
+}
+
+.back-button {
+  font-weight: bold;
+  border: none;
+  background: #2ecc71; /* Warna hijau muda */
+  color: white;
+  padding: 15px 30px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Bayangan */
+  border-radius: 12px; /* Membuat sudut tumpul */
+}
+
+.back-button:hover {
+  background: #27ae60; /* Warna hijau sedikit lebih gelap saat di-hover */
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4); /* Bayangan saat di-hover */
+  color: white;
+  transform: translateY(-7px);
+}
+
+body {
+  /* ... Gaya lainnya ... */
+  background-image: url('302.jpg');
+  background-size: cover; /* Ini akan memastikan gambar menutupi seluruh halaman */
+  background-repeat: no-repeat; /* Ini akan mencegah gambar diulang */
+}
+.hmm {
+    color: white;
+    text-align: center;
+    padding: top;
+}
