@@ -102,7 +102,7 @@ function closeModal() {
   modal.style.display = "none";
 }
 document.querySelector(".back-button").addEventListener("click", function() {
-  window.location.href = "classix-f.netlify.app";
+  window.location.href = "../";
 });
 const backButton = document.querySelector('.back-button');
 
@@ -115,7 +115,7 @@ backButton.addEventListener('mouseout', function() {
 });
 backButton.addEventListener('click', function() {
   this.style.transform = 'scale(0.9)';
-  window.location.href = 'classix-f.netlify.app';
+  window.location.href = '../';
 });
 window.addEventListener('mousemove', function() {
   var audioElement = document.getElementById('myAudio');
