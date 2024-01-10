@@ -1,0 +1,284 @@
+/*atur body*/
+body {
+  background-color: #31304D;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/*atur tampilan*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.contain-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #545454;
+  border-radius: 12px;
+  border: 2px solid black;
+  padding: 20px;
+}
+.album h2 {
+  color: #f0f0f0cc;
+  line-height: 1.5;
+  text-shadow: -1.3px 0 black, 0 1.3px black, 1.3px 0 black, 0 -1.3px black;
+  user-select: none;
+}
+.album p {
+  line-height: 1.5;
+  color: white;
+  user-select: none;
+}
+.album img {
+  max-height: 360px;
+  min-width: 100px;
+  max-width: 350px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/*menampilkan gambar full*/
+.overlay,
+.overlay1 {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 999;
+}
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  animation: Fadee 1s;
+}
+.overlay1:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+}
+.overlay .close {
+  position: absolute;
+  top: 1.5em;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  animation: bn13bouncy 5s infinite linear;
+  animation-delay: 2s;
+}
+.overlay1 .close {
+  position: absolute;
+  top: 1.5em;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  animation: bn13bouncy 5s infinite linear;
+  animation-delay: 2s;
+}
+.overlay img {
+  max-height: 100%;
+  max-width: 70%;
+  margin-top: 35%;
+}
+.overlay1 img {
+  max-height: 100%;
+  max-width: 70%;
+  margin-top: 35%;
+}
+.overlay:target img {
+  animation: Geserdratas 1.5s;
+}
+.overlay1:target img {
+  animation: geser 1.5s;
+}
+
+/* button nav*/
+.overlay .kiri,
+.overlay .kanan {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 0; /* Sembunyikan teks */
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  line-height: 50px;
+  z-index: 3; /* Pastikan button berada di atas gambar tambahan */
+}
+
+.overlay .kiri {
+  left: 0;
+  background: url('kiri.png') center/contain no-repeat; /* Ganti dengan path gambar kiri yang sesuai */
+}
+
+.overlay .kanan {
+  right: 0;
+  background: url('kanan.png') center/contain no-repeat; /* Ganti dengan path gambar kanan yang sesuai */
+}
+.overlay1 .kiri,
+.overlay1 .kanan {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 0; /* Sembunyikan teks */
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  line-height: 50px;
+  z-index: 3; /* Pastikan button berada di atas gambar tambahan */
+}
+
+.overlay1 .kiri {
+  left: 0;
+  background: url('kiri.png') center/contain no-repeat; /* Ganti dengan path gambar kiri yang sesuai */
+}
+
+.overlay1 .kanan {
+  right: 0;
+  background: url('kanan.png') center/contain no-repeat; /* Ganti dengan path gambar kanan yang sesuai */
+}
+/*button kembali*/
+.button-bck {
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: 5%;
+}
+.back {
+  padding: 15px 35px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.btn-41 {
+  border: 2px solid rgb(255, 255, 255);
+  z-index: 1;
+  color: white;
+}
+
+.btn-41:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+}
+
+.btn-41:hover {
+  color: rgb(0, 0, 0);
+}
+
+.btn-41:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-41:active {
+  top: 2px;
+}
+/*keyframe untuk animation*/
+
+@keyframes Fadee {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes Geserdratas {
+  from {
+    opacity: 0;
+    transform: translate3d(0,-70px,0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+@keyframes bn13bouncy {
+  0% {
+    top: 1.5em;
+  }
+  40% {
+    top: 1.5em;
+  }
+  43% {
+    top: 0.9em;
+  }
+  46% {
+    top: 1.5em;
+  }
+  48% {
+    top: 1.1em;
+  }
+  50% {
+    top: 1.5em;
+  }
+  53% {
+    top: 0.9em;
+  }
+  56% {
+    top: 1.5em;
+  }
+  58% {
+    top: 1.1em;
+  }
+  60% {
+    top: 1.5em;
+  }
+  100% {
+    top: 1.5em;
+  }
+}
+@keyframes geser {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes naik {
+  0% {
+    
+  }
+  50% {
+    transform: translate3d(0,-10px,0);
+  }
+  100% {
+    transform: translate3d(0,-6px,0);
+    transform: scale(1.2);
+  }
+}
